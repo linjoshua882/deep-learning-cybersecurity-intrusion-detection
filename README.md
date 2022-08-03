@@ -65,8 +65,16 @@ Each row in the dataset used is a payload sent.
 
 ## Methodology Summary
 
-I wanted to focus on probing problems for my IDS to simplify my problem statement, but also to account for the amount of data available. 6% of the data available was probing data, while other types of attacks (aside from brute force) accounted for much less. From there, I went into an entire modeling workflow to test and see if, computationally, based on the data I have, if an accurate classification of these two situations (authorized users vs. probes) is possible. So, I ran a trial workflow that included a train test split, SMOTE for oversampling of a 94/6 class imbalance, minmaxscaler to account for sparse data with different scales and heavily right-skewed distributions, as well as a basic logistic regression, which resulted in an approximate 79% accuracy rate.
+I wanted to focus on probing problems for my IDS to simplify my problem statement, but also to account for the amount of data available. 6% of the data available was probing data, while other types of attacks (aside from brute force) accounted for much less. From there, I went into an entire modeling workflow to test and see if, computationally, based on the data I have, if an accurate classification of these two situations (authorized users vs. probes) is possible. So, I ran a trial workflow that included a train test split, SMOTE for oversampling to account for a 94/6 class imbalance, minmaxscaler to account for sparse data with different scales and heavily right-skewed distributions, as well as a basic logistic regression, which resulted in an approximate 79% accuracy rate.
+
+I moved forward in creating a neural network instead of a machine learning model to classify between probes and authorized users. This was to challenge myself in the realm of deep learning, and I figured that the extra computational power wouldn't hurt either. I constructed a neural network inspired by research I found related to neural networks that have worked well in the past with other anomaly detection projects.
+
+![Neural Network Architecture](<github link>)
 
 ## Results Summary
 
-I moved forward in creating a neural network instead of a machine learning model to classify between probes and authorized users. This was to challenge myself in the realm of deep learning, and I figured that the extra computational power wouldn't hurt either. I constructed a neural network based on research I found related to neural networks that have worked well in the past with other anomaly detection projects.
+The neural network resulted in an approximate 83% test accuracy. The model also resulted in a near perfect true positive rate, but an approximate 18% false positive rate, labeling authorized users as unauthorized attackers. Ultimately, this was an unsuccessful attempt at creating a network IDS. While this neural network does a great job at understanding what network behavior attackers tend to take on, it is unable to effectively classify the difference between authorized and unauthorized users. Imagine being an employee at a company, trying to access a server that you need to use for your daily tasks, just to be labeled as an attacker 18% of the time. 
+
+![Model Accuracy](<github link>)
+
+![ROC Curve](<github link>)
