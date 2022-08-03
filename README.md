@@ -69,12 +69,12 @@ I wanted to focus on probing problems for my IDS to simplify my problem statemen
 
 I moved forward in creating a neural network instead of a machine learning model to classify between probes and authorized users. This was to challenge myself in the realm of deep learning, and I figured that the extra computational power wouldn't hurt either. I constructed a neural network inspired by research I found related to neural networks that have worked well in the past with other anomaly detection projects.
 
-![Neural Network Architecture](<github link>)
+![Neural Network Architecture](https://github.com/linjoshua882/deep-learning-cybersecurity-intrusion-detection/blob/main/assets/nn-architecture.png)
 
 ## Results Summary
 
 The neural network resulted in an approximate 83% test accuracy. The model also resulted in a near perfect true positive rate, but an approximate 18% false positive rate, labeling authorized users as unauthorized attackers. Ultimately, this was an unsuccessful attempt at creating a network IDS. While this neural network does a great job at understanding what network behavior attackers tend to take on, it is unable to effectively classify the difference between authorized and unauthorized users. Imagine being an employee at a company, trying to access a server that you need to use for your daily tasks, just to be labeled as an attacker 18% of the time. 
 
-![Model Accuracy](<github link>)
+![Model Accuracy](https://github.com/linjoshua882/deep-learning-cybersecurity-intrusion-detection/blob/main/assets/model-acc.png)
 
-![ROC Curve](<github link>)
+![ROC Curve](https://github.com/linjoshua882/deep-learning-cybersecurity-intrusion-detection/blob/main/assets/roc-curve.png)
