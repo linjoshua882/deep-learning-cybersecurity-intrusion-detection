@@ -57,6 +57,8 @@ Each row in the dataset used is a payload sent.
 ## Methods
 
 - Data cleaning
+- Feature selection / engineering
+- Principal component analysis (PCA)
 - Exploratory data analysis (EDA)
 - Oversampling (SMOTE)
 - Neural network deployment
