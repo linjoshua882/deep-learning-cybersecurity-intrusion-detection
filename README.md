@@ -108,6 +108,8 @@ I selected my neural network architecture based on anomaly detection research th
 
 I found that I had to implement regularization to 1. bridge the 6-7% gap in train and test accuracy, as well as earlystopping to conserve computational resources as well as to take time complexity into consideration.
 
+![Model Accuracy, No Regularization](https://github.com/linjoshua882/deep-learning-cybersecurity-intrusion-detection/blob/main/assets/model-acc-no-reg.png)
+
 ## Results Summary
 
 The neural network resulted in an approximate 83% test accuracy. The model also resulted in a near perfect true positive rate, but an approximate 18% false positive rate, labeling authorized users as unauthorized attackers. Ultimately, this was an unsuccessful attempt at creating a network IDS. While this neural network does a great job at understanding what network behavior attackers tend to take on, it is unable to effectively classify the difference between authorized and unauthorized users. Imagine being an employee at a company, trying to access a server that you need to use for your daily tasks, just to be labeled as an attacker 18% of the time.
