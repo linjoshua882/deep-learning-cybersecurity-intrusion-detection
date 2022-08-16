@@ -1,5 +1,7 @@
 # deep-learning-cybersecurity-intrusion-detection
 
+Original dataset: https://zenodo.org/record/6463389
+
 ## Problem Statement
 
 Companies, especially with small teams, have large gaps in their cybersecurity procedures. In most cases, even large companies are fairly easy targets to get hacked. Microsoft, NVidia, and Okta all got hacked by the same teenager in England in 2022 (https://www.bloomberg.com/news/articles/2022-03-23/teen-suspected-by-cyber-researchers-of-being-lapsus-mastermind), resulting in credit card information, customer addresses, customer emails, logins, and other proprietary documents being accessed by unauthorized attackers. This is an increasingly growing problem that, when unchecked, can potentially result in entire companies collapsing. This project hopes to use digital packet and payload behavior to create an effective network intrusion detection system (IDS) to identify when an unauthorized attacker is probing a server.
